@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Spotifade project",
+  "main": "server.js",
+  "scripts": {
+    "startDev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Group7",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19"
+  }
+}
