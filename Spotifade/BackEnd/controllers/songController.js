@@ -9,45 +9,46 @@ exports.getAllSongs = async (req,res,next)=>{
             data:{songs}
         })
     } catch(error){
-        res.json(err);
+        res.json(error);
     }
 }
 //create One song
 exports.createOneSong = async (req,res,next)=>{
     try{
         const {userId}=req.user;
-        const song=Song.create({...req.body});
+        const song=await Song.create({...req.body});
+        console.log('after');
         res.status(200).json({
             status:'success',
-            data:{song}
+            data:{ song }
         })
     } catch(error){
-        res.json(err);
+        next(error);
     }
 }
 //Update One song
 exports.updateOneSong = async (req,res,next)=>{
     try{
-        const {songId}=req.user;
+        const {songId}=req.params;
         const song= await Song.findByIdAndUpdate(songId,{...req.body},{new:true,runValidator:true});
         res.status(200).json({
             status:'success',
             data:{song}
         })
     } catch(error){
-        res.json(err);
+        next(error);
     }
 }
 //Delete One song
 exports.deleteOneSong = async (req,res,next)=>{
     try{
-        const {songId}=req.user;
+        const {songId}=req.params;
         const song= await Song.findByIdAndDelete(songId);
         res.status(200).json({
             status:'success',
             result:'song has been deleted'
         })
     } catch(error){
-        res.json(err);
+        next(error);
     }
 }

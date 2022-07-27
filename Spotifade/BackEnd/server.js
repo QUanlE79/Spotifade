@@ -24,12 +24,14 @@ app.use(express.json());
 app.use('/api/v1/auth',authRoute);
 app.use('/api/v1/song',songRoute);
 //Unhandle routes
-// app.all('*',(req,res,next)=>{
-//     const err= new Error('The route can not be found');
-//     err.statusCode=404;
-//     next(err);
-// })
-// app.use(errorHandler);
+app.all('*',(req,res,next)=>{
+    const err= new Error('The route can not be found');
+    err.statusCode=404;
+    next(err);
+})
+app.use(errorHandler);
+
+
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`);
 })
