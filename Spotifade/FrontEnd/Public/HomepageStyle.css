@@ -367,4 +367,85 @@ header .master_play .vol .dot::before{
   
 }
 
+/* song-side */
+
+header .song_side nav {
+  width: 90%;
+  height: 10%;
+  /* border: 1px solid #fff; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .song_side nav ul {
+  display: flex;
+}
+
+header .song_side nav ul li{
+  list-style: none;
+  position: relative;
+  font-size: 13px;
+  color: rgba(193, 193, 205, 0.567);
+  margin-right: 25px;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+header .song_side nav ul li:hover{
+  color: #fff;
+}
+
+header .song_side nav ul li:nth-child(1){
+  color: #fff;
+}
+
+header .song_side nav ul li span{
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background: #36e2ec;
+  bottom: -5px;
+  left: 0;
+  border-radius: 20px;
+}
+
+header .song_side nav .search{
+  position: relative;
+  width: 40%;
+  padding: 1px 10px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  color: gray;
+  margin-left: 200px;
+}
+
+header .song_side nav .search::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(105, 105, 170, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+header .song_side nav .search .bi{
+  font-size: 13px;
+  padding: 3px 0px 0px 10px;
+
+}
+
+header .song_side nav .search input{
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0px 10px;
+  color: #fff;
+  font-size: 12px;
+}
+
+
 
