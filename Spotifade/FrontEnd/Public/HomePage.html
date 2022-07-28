@@ -8,7 +8,28 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Spotifade</title>
+    <script>
+      var scaling = "fit";
+      var width = 500;
+      var height = 100;
+      var frame = new zim.Frame(scaling, width, height);
+      frame.on("ready",function(){
+        zog("ready from ZIM Frame");
+        var stage = frame.stage;
+        var stageW = frame.width;
+        var stageH = frame.height;
+        frame.color = frame.darker;
+        frame.loadAssets("../src/1.mp3");
+        frame.on("complete", function(){
+          frame.asset("../src/1.mp3").play();
+          stage.update();
+        })
+        
+      })
+    </script>
   </head>
   <body>
     <header>
@@ -90,6 +111,62 @@
           </ul>
           
         </nav>
+        <div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }'>
+          <div class="image"> <img src="../src/img1.jpg" alt="" id="poster_master_play"> </div>
+          <div class="image"> <img src="../src/img2.jpg" alt="" id="poster_master_play"> </div>
+          <div class="image"> <img src="../src/img3.jpg" alt="" id="poster_master_play"> </div>
+          <div class="image"> <img src="../src/img4.jpg" alt="" id="poster_master_play"> </div>
+          <div class="image"> <img src="../src/img5.jpg" alt="" id="poster_master_play"> </div>
+          <div class="image"> <img src="../src/img4.jpg" alt="" id="poster_master_play"> </div>
+          <div class="image"> <img src="../src/img3.jpg" alt="" id="poster_master_play"> </div>
+        </div>
+        <div class="textrandom">Random Song<span></span></div>
+        <div class="random_song js-flickity" data-flickity-options='{ "wrapAround": true }'>
+          <div class="song">
+            <img src="../src/img1.jpg" alt="Concho"/>
+            <h5>Gau Gau Gau</h5>
+          </div>
+          <div class="song">
+            <img src="../src/img1.jpg" alt="Concho"/>
+            <h5>Gau Gau Gau</h5>
+          </div>
+          <div class="song">
+            <img src="../src/img1.jpg" alt="Concho"/>
+            <h5>Gau Gau Gau</h5>
+          </div>
+          <div class="song">
+            <img src="../src/img1.jpg" alt="Concho"/>
+            <h5>Gau Gau Gau</h5>
+          </div>
+          <div class="song">
+            <img src="../src/img1.jpg" alt="Concho"/>
+            <h5>Gau Gau Gau</h5>
+          </div>
+          <div class="song">
+            <img src="../src/img1.jpg" alt="Concho"/>
+            <h5>Gau Gau Gau</h5>
+          </div>
+        </div>
+        <div class="wave">
+          <section>
+            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>
+            <h2>Welcome to Spotifade</h2>
+          </section>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+          <script src = "../src/wavify.js"></script>
+          <script src = "../src/jquery.wavify.js"></script>
+          <script >
+            // For jQuery
+            var myWave = $('#myID').wavify({
+            height: 20,
+            bones: 8,
+            amplitude: 100,
+            color: '#1c205e',
+            speed: .5
+            });
+          </script>
+        </div>
       </div>
       <div class="master_play">
         <div class="wave">
