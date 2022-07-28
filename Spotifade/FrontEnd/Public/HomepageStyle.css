@@ -510,22 +510,60 @@ header .song_side .random_song .song:before {
   text-align: center;
   line-height: 100px;
 }
-header .song_side .wave section {
-  position: absolute;
-  width: 100%;
+header .song_side .outline {
   height: 120px;
+  width: 100%;
   margin-top: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+header .song_side .outline::before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00ccff
+  );
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header .song_side .outline span {
+  position: absolute;
+  inset: 5px;
+  background: none;
+  z-index: 1;
+}
+header .song_side .outline .wave section {
+  position: absolute;
+  width: 99%;
+  height: 110px;
+  top: 5px;
   background: #070c18;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
+  bottom: 5px;
 }
-header .song_side .wave section h2 {
+header .song_side .outline .wave section h2 {
   position: relative;
   font-weight: 2;
   font-style: italic;
 }
-header .song_side .wave svg {
+header .song_side .outline .wave svg {
   position: absolute;
   top: 0;
   left: 0;
