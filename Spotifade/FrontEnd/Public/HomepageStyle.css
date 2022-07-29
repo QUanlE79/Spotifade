@@ -496,6 +496,21 @@ header .song_side .random_song .song h5 {
   margin-top: 90px;
   color: #fff;
   font-weight: 100;
+  text-overflow: hidden;
+}
+header .song_side .random_song .song i {
+  position: absolute;
+  font-size: 50px;
+  margin-left: 45px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 100;
+  transition: .3s linear;
+  opacity: 0;
+}
+header .song_side .random_song .song i:hover {
+  opacity: 1;
 }
 
 header .song_side .random_song .song {
@@ -504,6 +519,8 @@ header .song_side .random_song .song {
   margin-right: 10px;
   display: flex;
   flex-direction: column;
+}header .song_side .random_song .song:hover {
+  background: rgb(105, 105, 170, 0.1);
 }
 header .song_side .random_song .song:before {
   display: block;
