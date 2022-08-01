@@ -17,7 +17,6 @@ exports.createOneSong = async (req,res,next)=>{
     try{
         const {userId}=req.user;
         const song=await Song.create({...req.body});
-        console.log('after');
         res.status(200).json({
             status:'success',
             data:{ song }
