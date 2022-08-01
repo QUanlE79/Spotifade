@@ -1,12 +1,14 @@
 const mongoose=require('mongoose');
 const user=require("../models/UserModel");
-const song=require("../models/SongModel");
+const Song=require("../models/SongModel");
 const Playlistschema = new mongoose.Schema({
-    name:{type: string, trim:true, required:[true,'Playlist name is required']},
-    Song:[song],
+    name:{type: String, trim:true, required:[true,'Playlist name is required']},
+    Song:{type:mongoose.Schema.Types.ObjectId,
+        ref:'Song'},
     user:
-    {type:mongoose.Schema.Types.ObjectId,
-        ref:'user'
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
     }
      
     

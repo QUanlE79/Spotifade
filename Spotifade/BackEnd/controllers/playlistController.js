@@ -1,6 +1,6 @@
 const Playlist=require('../models/PlaylistModel');
 //
-exports.getAllPlaylist = async (req,res,next)=>{
+exports.getAllPlaylists = async (req,res,next)=>{
     try{
         const playlists= await Playlist.find({}).populate('user');
         res.status(200).json({
@@ -19,14 +19,14 @@ exports.createOnePlaylist = async (req,res,next)=>{
         const playlist=await Playlist.create({...req.body,user:userId});
         res.status(200).json({
             status:'success',
-            data:{ playlist }
+            data:{playlist}
         })
     } catch(error){
         next(error);
     }
 }
 //Update One song
-exports.updateOneSong = async (req,res,next)=>{
+exports.updateOnePlaylist = async (req,res,next)=>{
     try{
         const {songId}=req.params;
         const song= await Song.findByIdAndUpdate(songId,{...req.body},{new:true,runValidator:true});
@@ -39,10 +39,10 @@ exports.updateOneSong = async (req,res,next)=>{
     }
 }
 //Delete One song
-exports.deleteOneSong = async (req,res,next)=>{
+exports.deleteOnePlaylist = async (req,res,next)=>{
     try{
-        const {songId}=req.params;
-        const song= await Song.findByIdAndDelete(songId);
+        const {playlistId}=req.params;
+        const song= await Song.findByIdAndDelete(playlistId);
         res.status(200).json({
             status:'success',
             result:'song has been deleted'

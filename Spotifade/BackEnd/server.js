@@ -7,6 +7,7 @@ const cors=require('cors');
 //import Routes
 const authRoute=require('./routes/authRoute');
 const songRoute=require('./routes/songRoute');
+const playlistRoute=require('./routes/playlistRoute');
 const {errorHandler}=require('./middleware/errorHandler');
 
 connectDB();
@@ -23,6 +24,7 @@ app.use(express.json());
 //Mount the Route
 app.use('/api/v1/auth',authRoute);
 app.use('/api/v1/song',songRoute);
+app.use('/api/v1/playlist',playlistRoute);
 //Unhandle routes
 app.all('*',(req,res,next)=>{
     const err= new Error('The route can not be found');
