@@ -58,3 +58,28 @@ exports.getCurrentUser= async (req,res,next)=>{
         res.json(error);
     }
 }
+// Get all user
+exports.getAllUsers=async (req,res,next)=>{
+    try {
+        const users=await User.find({}).select('name');
+        res.status(200).json({
+            status:'success',
+            data: {users}
+        })
+    } catch (error) {
+        next(error);
+    }
+}
+// Delete user
+exports.deleteOneUser=async(req,res,next)=>{
+    try {
+        const {userID}=req.params;
+        const user=await User.findByIdAndDelete(userID)
+        res.status(200).json({
+            status:'success',
+            result:'User has been deleted'
+        })
+    } catch (error) {
+        
+    }
+}

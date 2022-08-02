@@ -2,7 +2,7 @@ const Song=require('../models/SongModel');
 //
 exports.getAllSongs = async (req,res,next)=>{
     try{
-        const songs= await Song.find({}).populate('author');
+        const songs= await Song.find({}).select("-updatedAt");
         res.status(200).json({
             status:'success',
             result:songs.length,
