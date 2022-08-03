@@ -118,16 +118,10 @@ Array.from(document.getElementsByClassName("playListPlay")).forEach((e) => {
     masterPlay.classList.add("bi-pause-fill");
     masterPlay.classList.remove("bi-play-circle-fill");
 
-    let songTitles = songs.filter((els) => {
-      return els.id === index;
-    });
-    songTitles.forEach((elss) => {
-      elss = `${songs[index - 1].SongName} <div class="subtitle">${
-        songs[index - 1].Author
-      }</div>`;
-      var title = document.getElementById("title");
-      title.innerHTML = elss;
-    });
+    var Author = `${songs[index - 1].SongName} <div class="subtitle">${
+      songs[index - 1].Author
+    }</div>`;
+    document.getElementById("title").innerHTML = Author;
     makeAllBackGround();
     Array.from(document.getElementsByClassName("song_item"))[
       index - 1
