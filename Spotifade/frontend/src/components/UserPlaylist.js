@@ -9,16 +9,22 @@ export default function User_playlist() {
       <body>
         <header>
           <div class="menu_side">
-            <h1>Spotifade</h1>
+            <a href="/">
+              <h1>Spotifade</h1>
+            </a>
             <div class="playlist">
-              <h4>
-                <span></span>
-                <i class="bi bi-person-circle"></i>Infomation
-              </h4>
-              <h4 class="active" id="active">
-                <span></span>
-                <i class="bi bi-music-note-list"></i>Playlist
-              </h4>
+              <a href="/UserInfomation">
+                <h4>
+                  <span></span>
+                  <i class="bi bi-person-circle"></i>Infomation
+                </h4>
+              </a>
+              <a href="/UserPlaylist">
+                <h4 class="active" id="active">
+                  <span></span>
+                  <i class="bi bi-music-note-list"></i>Playlist
+                </h4>
+              </a>
             </div>
             <div class="menu_song">
               <li class="song_item">
@@ -27,8 +33,8 @@ export default function User_playlist() {
                 <h5>
                   Gau Gau Gau
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="1"></i>
               </li>
               <li class="song_item">
                 <span>02</span>
@@ -36,26 +42,28 @@ export default function User_playlist() {
                 <h5>
                   Gau Gau Gau
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="2"></i>
               </li>
               <li class="song_item">
                 <span>03</span>
                 <img src="./picture/img1.jpg" alt="Concho" />
                 <h5>
                   Gau Gau Gau
+                  <br />
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="3"></i>
               </li>
               <li class="song_item">
                 <span>04</span>
                 <img src="./picture/img1.jpg" alt="Concho" />
                 <h5>
                   Gau Gau Gau
+                  <br />
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="4"></i>
               </li>
             </div>
           </div>
@@ -67,11 +75,15 @@ export default function User_playlist() {
               </div>
 
               <ul>
+                <li>Category</li>
                 <li>
-                  Category <span></span>
+                  <a href="/UserInfomation">
+                    My Profile <span></span>
+                  </a>
                 </li>
-                <li>My Profile</li>
-                <li>Log out</li>
+                <li>
+                  <a href="/Login">Log out</a>
+                </li>
               </ul>
             </nav>
             <div
@@ -148,32 +160,32 @@ export default function User_playlist() {
                     >
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="5"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="6"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="7"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="8"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="9"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="10"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                     </div>
@@ -188,32 +200,32 @@ export default function User_playlist() {
                     >
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="11"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="12"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="13"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="14"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="15"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="16"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                     </div>
@@ -228,32 +240,32 @@ export default function User_playlist() {
                     >
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="17"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="18"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="19"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="20"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="21"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                       <div class="song">
                         <img src="./picture/img1.jpg" alt="Concho" />
-                        <i class="bi playListPlay bi-play-circle" id="1"></i>
+                        <i class="bi playListPlay bi-play-circle" id="22"></i>
                         <h5>Gau Gau Gau</h5>
                       </div>
                     </div>
@@ -276,9 +288,9 @@ export default function User_playlist() {
             </h5>
             <div class="icon">
               <i class="bi shuffle bi-music-note-beamed">next</i>
-              <i class="bi bi-skip-start-fill"></i>
+              <i class="bi bi-skip-start-fill" id="back"></i>
               <i class="bi bi-play-circle-fill" id="masterPlay"></i>
-              <i class="bi bi-skip-end-fill"></i>
+              <i class="bi bi-skip-end-fill" id="next"></i>
               <i class="bi bi-download" id="download_music"></i>
             </div>
             <span id="currentStart">0:00</span>

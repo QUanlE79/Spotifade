@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: #131312;
   display: flex;
@@ -40,10 +40,14 @@ header .master_play {
   background: #111727;
   box-shadow: 0px 3px 8px #090f1f;
 }
-header .menu_side h1 {
+header .menu_side a {
+  text-decoration: none;
+}
+header .menu_side a h1 {
   font-size: 30px;
   margin: 15px 0px 0px 20px;
   font-weight: 500;
+  color: #fff;
 }
 header .menu_side .playlist {
   margin: 40px 0px 0px 20px;
@@ -386,12 +390,17 @@ header .song_side nav ul li {
   cursor: pointer;
   transition: 0.3s linear;
 }
-
-header .song_side nav ul li:hover {
-  color: #fff;
+header .song_side nav ul li a {
+  text-decoration: none;
+  color: rgba(193, 193, 205, 0.567);
 }
 
-header .song_side nav ul li:nth-child(1) {
+header .song_side nav ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .song_side nav ul li a:nth-child(0) {
   color: #fff;
 }
 
@@ -497,7 +506,8 @@ header .song_side .random_song .song_item h5 {
   color: #fff;
   font-weight: 100;
   text-overflow: hidden;
-}header .song_side .random_song .song_item h5 .subtitle {
+}
+header .song_side .random_song .song_item h5 .subtitle {
   position: absolute;
   font-size: 9px;
   margin-left: 40px;
@@ -514,7 +524,7 @@ header .song_side .random_song .song_item i {
   cursor: pointer;
   color: #fff;
   font-weight: 100;
-  transition: .3s linear;
+  transition: 0.3s linear;
   opacity: 0;
 }
 header .song_side .random_song li i:hover {
@@ -527,7 +537,8 @@ header .song_side .random_song .song_item {
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-}header .song_side .random_song .song_item:hover {
+}
+header .song_side .random_song .song_item:hover {
   background: rgb(105, 105, 170, 0.1);
 }
 header .song_side .random_song .song_item:before {

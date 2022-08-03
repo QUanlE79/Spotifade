@@ -1,12 +1,4 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  background-color: #131312;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header {
+.headeruser {
   width: 85%;
   height: 95%;
   border: 1px solid #1d2e5c;
@@ -14,7 +6,7 @@ header {
   flex-wrap: wrap;
   overflow: hidden;
 }
-header .menu_side,
+.headeruser .menu_side,
 .data_side {
   position: relative;
   width: 25%;
@@ -24,19 +16,19 @@ header .menu_side,
   box-shadow: 5px 0px 2px #090f1f;
   color: #fff;
 }
-header .data_side {
+.headeruser .data_side {
   width: 75%;
   background-color: #0b1320;
 }
-header .menu_side h1 {
+.headeruser .menu_side h1 {
   font-size: 30px;
   margin: 15px 0px 0px 20px;
   font-weight: 500;
 }
-header .menu_side .menu_list {
+.headeruser .menu_side .menu_list {
   margin: 40px 0px 0px 20px;
 }
-header .menu_side .menu_list h4 {
+.headeruser .menu_side .menu_list h4 {
   font-size: 14px;
   font-weight: 400;
   padding-bottom: 10px;
@@ -49,14 +41,14 @@ header .menu_side .menu_list h4 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-header .menu_side .menu_list h4:hover {
+.headeruser .menu_side .menu_list h4:hover {
   color: #fff;
 }
-header .menu_side .menu_list h4 span {
+.headeruser .menu_side .menu_list h4 span {
   position: relative;
   margin-right: 35px;
 }
-header .menu_side .menu_list h4 span::before {
+.headeruser .menu_side .menu_list h4 span::before {
   content: "";
   position: absolute;
   width: 4px;
@@ -66,7 +58,7 @@ header .menu_side .menu_list h4 span::before {
   top: -4px;
   transition: 0.3s linear;
 }
-header .menu_side .menu_list h4 span::before:hover {
+.headeruser .menu_side .menu_list h4 span::before:hover {
   content: "";
   position: absolute;
   width: 4px;
@@ -76,20 +68,20 @@ header .menu_side .menu_list h4 span::before:hover {
   top: -4px;
   transition: 0.3s linear;
 }
-header .menu_side .menu_list h4 .bi {
+.headeruser .menu_side .menu_list h4 .bi {
   display: none;
 }
-header .menu_side .menu_list .active {
+.headeruser .menu_side .menu_list .active {
   color: #36e2ec;
 }
-header .menu_side .menu_list .active span {
+.headeruser .menu_side .menu_list .active span {
   display: none;
 }
-header .menu_side .menu_list .active .bi {
+.headeruser .menu_side .menu_list .active .bi {
   display: flex;
   margin-right: 20px;
 }
-header .menu_side .founder_side {
+.headeruser .menu_side .founder_side {
   margin-top: 50px;
   width: 99%;
   height: 63%;
@@ -99,7 +91,7 @@ header .menu_side .founder_side {
 
 /* song-side */
 
-header .data_side nav {
+.headeruser .data_side nav {
   width: 90%;
   height: 10%;
   /* border: 1px solid #fff; */
@@ -109,11 +101,12 @@ header .data_side nav {
   justify-content: space-between;
 }
 
-header .data_side nav ul {
+.headeruser .data_side nav ul {
   display: flex;
 }
 
-header .data_side nav ul li {
+.headeruser .data_side nav ul li a {
+  text-decoration: none;
   list-style: none;
   position: relative;
   font-size: 13px;
@@ -123,15 +116,14 @@ header .data_side nav ul li {
   transition: 0.3s linear;
 }
 
-header .data_side nav ul li:hover {
+.headeruser .data_side nav ul li a:hover {
   color: #fff;
 }
 
-header .data_side nav ul li:nth-child(1) {
+.headeruser .data_side nav ul li a:nth-child(1) {
   color: #fff;
 }
-
-header .data_side nav ul li span {
+.headeruser .data_side nav ul li span {
   position: absolute;
   width: 100%;
   height: 2.5px;
@@ -141,7 +133,7 @@ header .data_side nav ul li span {
   border-radius: 20px;
 }
 
-header .data_side nav .search {
+.headeruser .data_side nav .search {
   position: relative;
   width: 40%;
   padding: 1px 10px;
@@ -151,7 +143,7 @@ header .data_side nav .search {
   background: #18202c;
 }
 
-header .data_side nav .search::before {
+.headeruser .data_side nav .search::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -162,12 +154,12 @@ header .data_side nav .search::before {
   z-index: -1;
 }
 
-header .data_side nav .search .bi {
+.headeruser .data_side nav .search .bi {
   font-size: 13px;
   padding: 3px 0px 0px 10px;
 }
 
-header .data_side nav .search input {
+.headeruser .data_side nav .search input {
   background: none;
   border: none;
   outline: none;
@@ -175,7 +167,7 @@ header .data_side nav .search input {
   color: #fff;
   font-size: 12px;
 }
-header .data_side .carousel {
+.headeruser .data_side .carousel {
   width: 90%;
   height: 30%;
   -webkit-box-sizing: border-box;
@@ -183,7 +175,7 @@ header .data_side .carousel {
   margin: auto;
   padding: 20px;
 }
-header .data_side .carousel .image {
+.headeruser .data_side .carousel .image {
   position: relative;
   width: 70%;
   height: 100%;
@@ -191,11 +183,11 @@ header .data_side .carousel .image {
   margin-right: 10px;
 }
 
-header .data_side .carousel .image:before {
+.headeruser .data_side .carousel .image:before {
   display: block;
   text-align: center;
 }
-header .data_side .random_song {
+.headeruser .data_side .random_song {
   box-sizing: border-box;
   margin: auto;
   margin-top: 0px;
@@ -204,7 +196,7 @@ header .data_side .random_song {
   height: 25%;
   margin-top: 0px;
 }
-header .data_side .text_user {
+.headeruser .data_side .text_user {
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -213,7 +205,7 @@ header .data_side .text_user {
   text-align: center;
   margin-left: 5px;
 }
-header .data_side .text_user span {
+.headeruser .data_side .text_user span {
   position: absolute;
   width: 90%;
   height: 2.5px;
@@ -221,16 +213,16 @@ header .data_side .text_user span {
   border-radius: 20px;
   margin-top: 20px;
 }
-header .data_side .list_user {
+.headeruser .data_side .list_user {
   margin-top: 10px;
   width: 100%;
 }
-header .data_side .list_user nav {
+.headeruser .data_side .list_user nav {
   margin-left: 5px;
   margin-right: 0px;
   border: 1px solid #36e2ec;
 }
-header .data_side .list_user nav ul {
+.headeruser .data_side .list_user nav ul {
   margin-left: 30px;
   display: flex;
   flex-direction: column;
@@ -241,11 +233,11 @@ header .data_side .list_user nav ul {
   overflow: hidden;
   overflow-y: scroll;
 }
-header .data_side .list_user nav ul li {
+.headeruser .data_side .list_user nav ul li {
   font-size: 20px;
   line-height: 50px;
 }
-header .data_side .list_user nav ul li a {
+.headeruser .data_side .list_user nav ul li a {
   margin-left: 350px;
   position: relative;
   background-color: #18202c;
@@ -258,18 +250,18 @@ header .data_side .list_user nav ul li a {
   justify-items: center;
   font-size: 20px;
 }
-header .data_side .list_user nav ul li a:hover {
+.headeruser .data_side .list_user nav ul li a:hover {
   letter-spacing: 0.25em;
   background: #ff1867;
   box-shadow: 0 0 35px var(#ff1867);
 }
-header .data_side .list_user nav ul li a::before {
+.headeruser .data_side .list_user nav ul li a::before {
   content: "";
   position: absolute;
   inset: 2px;
   background: #18202c;
 }
-header .data_side .list_user nav ul li a span {
+.headeruser .data_side .list_user nav ul li a span {
   all: none;
   text-align: center;
   justify-content: center;
@@ -277,18 +269,18 @@ header .data_side .list_user nav ul li a span {
   background: none;
   z-index: 1;
 }
-header .data_side .list_user nav ul li a span .bi {
+.headeruser .data_side .list_user nav ul li a span .bi {
   margin-top: 0px;
 }
-header .data_side .list_user nav ul::-webkit-scrollbar {
+.headeruser .data_side .list_user nav ul::-webkit-scrollbar {
   width: 10px;
   border: 1px solid #36e2ec;
 }
-header .data_side .list_user nav ul::-webkit-scrollbar-thumb {
+.headeruser .data_side .list_user nav ul::-webkit-scrollbar-thumb {
   background: #36e2ec;
 }
 
-header .data_side .outline {
+.headeruser .data_side .outline {
   height: 120px;
   width: 100%;
   margin-top: 30px;
@@ -297,7 +289,7 @@ header .data_side .outline {
   align-items: center;
   overflow: hidden;
 }
-header .data_side .outline::before {
+.headeruser .data_side .outline::before {
   content: "";
   position: absolute;
   height: 120px;
@@ -318,13 +310,13 @@ header .data_side .outline::before {
     transform: rotate(360deg);
   }
 }
-header .data_side .outline span {
+.headeruser .data_side .outline span {
   position: absolute;
   inset: 5px;
   background: none;
   z-index: 1;
 }
-header .data_side .outline .wave section {
+.headeruser .data_side .outline .wave section {
   position: absolute;
   width: 99%;
   height: 110px;
@@ -336,12 +328,12 @@ header .data_side .outline .wave section {
   margin-left: 5px;
   bottom: 5px;
 }
-header .data_side .outline .wave section h2 {
+.headeruser .data_side .outline .wave section h2 {
   position: relative;
   font-weight: 2;
   font-style: italic;
 }
-header .data_side .outline .wave svg {
+.headeruser .data_side .outline .wave svg {
   position: absolute;
   top: 0;
   left: 0;

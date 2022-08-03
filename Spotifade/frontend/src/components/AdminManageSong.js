@@ -10,14 +10,18 @@ export default function AdminManageSong() {
           <div class="menu_side">
             <h1>Spotifade</h1>
             <div class="menu_list">
-              <h4>
-                <span></span>
-                <i class="bi bi-person-lines-fill"></i>User
-              </h4>
-              <h4 class="active" id="active">
-                <span></span>
-                <i class="bi bi-music-note-beamed"></i>Song
-              </h4>
+              <a href="/AdminManageUser">
+                <h4>
+                  <span></span>
+                  <i class="bi bi-person-lines-fill"></i>User
+                </h4>
+              </a>
+              <a href="/AdminManageSong">
+                <h4 class="active" id="active">
+                  <span></span>
+                  <i class="bi bi-music-note-beamed"></i>Song
+                </h4>
+              </a>
             </div>
             <div class="founder_side">
               20127442 - Tôn Thất Bách <br />
@@ -38,7 +42,9 @@ export default function AdminManageSong() {
 
               <ul>
                 <li>
-                  Log out <span></span>
+                  <a href="/Login">
+                    Log out <span></span>
+                  </a>
                 </li>
               </ul>
             </nav>

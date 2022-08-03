@@ -47,7 +47,7 @@ export default function signup() {
                 </div>
                 <input type="submit" value="Sign up" class="submit" />
                 <p>
-                  Already have an account? <a href="login.html">Login</a>
+                  Already have an account? <a href="/Login">Login</a>
                 </p>
               </form>
             </div>

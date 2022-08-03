@@ -40,10 +40,14 @@ header .master_play {
   background: #111727;
   box-shadow: 0px 3px 8px #090f1f;
 }
-header .menu_side h1 {
+header .menu_side a {
+  text-decoration: none;
+}
+header .menu_side a h1 {
   font-size: 30px;
   margin: 15px 0px 0px 20px;
   font-weight: 500;
+  color: #fff;
 }
 header .menu_side .playlist {
   margin: 40px 0px 0px 20px;
@@ -385,15 +389,21 @@ header .song_side nav ul li {
   margin-right: 25px;
   cursor: pointer;
   transition: 0.3s linear;
+  color: #4c5262;
+}
+header .song_side nav ul li a {
+  text-decoration: none;
+  color: rgba(193, 193, 205, 0.567);
 }
 
-header .song_side nav ul li:hover {
+header .song_side nav ul li a:hover {
   color: #fff;
+  text-decoration: none;
 }
-
-header .song_side nav ul li:nth-child(1) {
+/*
+header .song_side nav ul li a:nth-child(1) {
   color: #fff;
-}
+}*/
 
 header .song_side nav ul li span {
   position: absolute;

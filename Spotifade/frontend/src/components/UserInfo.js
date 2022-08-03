@@ -1,21 +1,29 @@
 import React from "react";
 import "../css/UserInfoStyle.css";
+import useScript from "../hook/useScripts";
 export default function UserInfo() {
+  useScript("../effect/HP.js");
   return (
     <React.Fragment>
       <body>
         <header>
           <div class="menu_side">
-            <h1>Spotifade</h1>
+            <a href="/">
+              <h1>Spotifade</h1>
+            </a>
             <div class="playlist">
-              <h4 class="active" id="active">
-                <span></span>
-                <i class="bi bi-person-circle"></i>Infomation
-              </h4>
-              <h4>
-                <span></span>
-                <i class="bi bi-music-note-list"></i>Playlist
-              </h4>
+              <a href="/UserInfomation">
+                <h4 class="active" id="active">
+                  <span></span>
+                  <i class="bi bi-person-circle"></i>Infomation
+                </h4>
+              </a>
+              <a href="/UserPlaylist">
+                <h4>
+                  <span></span>
+                  <i class="bi bi-music-note-list"></i>Playlist
+                </h4>
+              </a>
             </div>
             <div class="menu_song">
               <li class="song_item">
@@ -24,8 +32,8 @@ export default function UserInfo() {
                 <h5>
                   Gau Gau Gau
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="1"></i>
               </li>
               <li class="song_item">
                 <span>02</span>
@@ -33,26 +41,28 @@ export default function UserInfo() {
                 <h5>
                   Gau Gau Gau
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="2"></i>
               </li>
               <li class="song_item">
                 <span>03</span>
                 <img src="./picture/img1.jpg" alt="Concho" />
                 <h5>
                   Gau Gau Gau
+                  <br />
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="3"></i>
               </li>
               <li class="song_item">
                 <span>04</span>
                 <img src="./picture/img1.jpg" alt="Concho" />
                 <h5>
                   Gau Gau Gau
+                  <br />
                   <div class="subtitle">Ang ang</div>
-                  <i class="bi playListPlay bi-play-circle" id="1"></i>
                 </h5>
+                <i class="bi playListPlay bi-play-circle" id="4"></i>
               </li>
             </div>
           </div>
@@ -64,11 +74,15 @@ export default function UserInfo() {
               </div>
 
               <ul>
+                <li>Category</li>
                 <li>
-                  Category <span></span>
+                  <a href="/UserInfomation">
+                    My Profile<span></span>
+                  </a>
                 </li>
-                <li>My Profile</li>
-                <li>Log out</li>
+                <li>
+                  <a href="/Login">Log out</a>
+                </li>
               </ul>
             </nav>
             <div class="infomation">
@@ -117,9 +131,9 @@ export default function UserInfo() {
             </h5>
             <div class="icon">
               <i class="bi shuffle bi-music-note-beamed">next</i>
-              <i class="bi bi-skip-start-fill"></i>
+              <i class="bi bi-skip-start-fill" id="back"></i>
               <i class="bi bi-play-circle-fill" id="masterPlay"></i>
-              <i class="bi bi-skip-end-fill"></i>
+              <i class="bi bi-skip-end-fill" id="next"></i>
               <i class="bi bi-download" id="download_music"></i>
             </div>
             <span id="currentStart">0:00</span>

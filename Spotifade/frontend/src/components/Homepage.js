@@ -9,7 +9,9 @@ export default function Homepage() {
       <body>
         <header>
           <div class="menu_side">
-            <h1>Spotifade</h1>
+            <a href="/">
+              <h1>Spotifade</h1>
+            </a>
             <div class="playlist">
               <h4 class="active" id="active">
                 <span></span>
@@ -76,8 +78,12 @@ export default function Homepage() {
                 <li>
                   Category <span></span>
                 </li>
-                <li>My Profile</li>
-                <li>Log out</li>
+                <li>
+                  <a href="/UserInfomation">My Profile</a>
+                </li>
+                <li>
+                  <a href="/Login">Log out</a>
+                </li>
               </ul>
             </nav>
             <div

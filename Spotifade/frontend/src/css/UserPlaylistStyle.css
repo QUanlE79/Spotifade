@@ -385,15 +385,21 @@ header .song_side nav ul li {
   margin-right: 25px;
   cursor: pointer;
   transition: 0.3s linear;
+  color: #4c5262;
+}
+header .song_side nav ul li a {
+  text-decoration: none;
+  color: rgba(193, 193, 205, 0.567);
 }
 
-header .song_side nav ul li:hover {
+header .song_side nav ul li a:hover {
   color: #fff;
+  text-decoration: none;
 }
-
-header .song_side nav ul li:nth-child(1) {
+/*
+header .song_side nav ul li a:nth-child(1) {
   color: #fff;
-}
+}*/
 
 header .song_side nav ul li span {
   position: absolute;

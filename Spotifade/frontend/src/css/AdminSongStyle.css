@@ -113,7 +113,8 @@
   display: flex;
 }
 
-.headeradminsong .data_side nav ul li {
+.headeradminsong .data_side nav ul li a {
+  text-decoration: none;
   list-style: none;
   position: relative;
   font-size: 13px;
@@ -123,11 +124,11 @@
   transition: 0.3s linear;
 }
 
-.headeradminsong .data_side nav ul li:hover {
+.headeradminsong .data_side nav ul li a:hover {
   color: #fff;
 }
 
-.headeradminsong .data_side nav ul li:nth-child(1) {
+.headeradminsong .data_side nav ul li a:nth-child(1) {
   color: #fff;
 }
 
