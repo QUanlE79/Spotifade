@@ -3,6 +3,11 @@ const jwt=require('jsonwebtoken');
 const bcrypt=require('bcryptjs');
 exports.register = async (req,res,next)=>{
     try{
+        if (req.body.Password!=req.body.Password1){
+            const err= new Error('Your confirm password is incorrect');
+            err.statusCode=400;
+            return next(err);
+        }
         const user = await User.create(req.body);
         const token=jwt.sign({userID:user._id},process.env.APP_SECRET)
         res.status(200).json({
