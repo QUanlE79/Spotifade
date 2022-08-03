@@ -1,6 +1,5 @@
 var path = "./music/1.mp3";
 const music = new Audio(path);
-
 const songs = [
   {
     id: 1,
@@ -81,6 +80,9 @@ Array.from(document.getElementsByClassName("song_item")).forEach((e, i) => {
 });
 
 let masterPlay = document.getElementById("masterPlay");
+// while(!masterPlay){
+//   masterPlay = document.getElementById("masterPlay");
+// }
 let wave = document.getElementById("wave");
 
 masterPlay.addEventListener("click", () => {
@@ -96,6 +98,7 @@ masterPlay.addEventListener("click", () => {
     masterPlay.classList.add("bi-play-circle-fill");
   }
 });
+
 const makeAllPlays = () => {
   Array.from(document.getElementsByClassName("playListPlay")).forEach((el) => {
     el.classList.add("bi-play-circle");
@@ -117,16 +120,11 @@ Array.from(document.getElementsByClassName("playListPlay")).forEach((e) => {
     music.play();
     masterPlay.classList.add("bi-pause-fill");
     masterPlay.classList.remove("bi-play-circle-fill");
-
-    let songTitles = songs.filter((els) => {
-      return els.id == index;
-    });
-    songTitles.forEach((elss) => {
-      elss = `${songs[index - 1].SongName} <div class="subtitle">${
-        songs[index - 1].Author
-      }</div>`;
-      title.innerHTML = elss;
-    });
+    var Author = `${songs[index - 1].SongName} <div class="subtitle">${
+      songs[index - 1].Author
+    }</div>`;
+    var title = document.getElementById("title");
+    title.innerHTML = Author;
     makeAllBackGround();
     Array.from(document.getElementsByClassName("song_item"))[
       index - 1
@@ -137,12 +135,11 @@ Array.from(document.getElementsByClassName("playListPlay")).forEach((e) => {
     wave.classList.add("active2");
   });
 });
-
 let currentStart = document.getElementById("currentStart");
 let currentEnd = document.getElementById("currentEnd");
 let seek = document.getElementById("seek");
 let bar2 = document.getElementById("bar2");
-let dot = document.getElementsByClassName("dot")[0];
+let dot = document.getElementById("progress_dot");
 music.addEventListener("timeupdate", () => {
   let music_curr = music.currentTime;
   let music_dur = music.duration;
@@ -180,7 +177,7 @@ let vol_bar = document.getElementsByClassName("vol_bar")[0];
 let vol_dot = document.getElementById("vol_dot");
 
 vol.addEventListener("change", () => {
-  if (vol.value == 0) {
+  if (vol.value === 0) {
     vol_icon.classList.remove("bi-volume-up");
     vol_icon.classList.remove("bi-volume-down");
     vol_icon.classList.add("bi-volume-off");
@@ -196,7 +193,6 @@ vol.addEventListener("change", () => {
     vol_icon.classList.remove("bi-volume-off");
   }
   let vol_a = vol.value;
-  console.log(vol.value);
   vol_bar.style.width = `${vol_a}%`;
   vol_dot.style.left = `${vol_a}%`;
   music.volume = vol_a / 100;
@@ -205,7 +201,7 @@ vol.addEventListener("change", () => {
 let back = document.getElementById("back");
 let next = document.getElementById("next");
 
-back.addEventListener("click", () => {
+back.addEventListener("click", (el) => {
   index -= 1;
   if (index < 1) {
     index = Array.from(document.getElementsByClassName("song_item")).length;
@@ -218,12 +214,13 @@ back.addEventListener("click", () => {
   masterPlay.classList.remove("bi-play-circle-fill");
 
   let songTitles = songs.filter((els) => {
-    return els.id == index;
+    return els.id === index;
   });
   songTitles.forEach((elss) => {
     elss = `${songs[index - 1].SongName} <div class="subtitle">${
       songs[index - 1].Author
     }</div>`;
+    var title = document.getElementById("title");
     title.innerHTML = elss;
   });
   makeAllBackGround();
@@ -236,7 +233,7 @@ back.addEventListener("click", () => {
   wave.classList.add("active2");
 });
 
-next.addEventListener("click", () => {
+next.addEventListener("click", (el) => {
   index++;
   if (index > Array.from(document.getElementsByClassName("song_item")).length) {
     index = 1;
@@ -248,12 +245,13 @@ next.addEventListener("click", () => {
   masterPlay.classList.remove("bi-play-circle-fill");
 
   let songTitles = songs.filter((els) => {
-    return els.id == index;
+    return els.id === index;
   });
   songTitles.forEach((elss) => {
     elss = `${songs[index - 1].SongName} <div class="subtitle">${
       songs[index - 1].Author
     }</div>`;
+    var title = document.getElementById("title");
     title.innerHTML = elss;
   });
   makeAllBackGround();
@@ -266,7 +264,7 @@ next.addEventListener("click", () => {
   wave.classList.add("active2");
 });
 
-music.addEventListener("ended", () => {
+music.addEventListener("ended", (el) => {
   index++;
   if (index > Array.from(document.getElementsByClassName("song_item")).length) {
     index = 1;
@@ -278,12 +276,13 @@ music.addEventListener("ended", () => {
   masterPlay.classList.remove("bi-play-circle-fill");
 
   let songTitles = songs.filter((els) => {
-    return els.id == index;
+    return els.id === index;
   });
   songTitles.forEach((elss) => {
     elss = `${songs[index - 1].SongName} <div class="subtitle">${
       songs[index - 1].Author
     }</div>`;
+    var title = document.getElementById("title");
     title.innerHTML = elss;
   });
   makeAllBackGround();
