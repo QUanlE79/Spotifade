@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import "../css/HomepageStyle.css";
+import axios from "axios";
 import useScript from "../hook/useScripts.js";
 export default function Homepage() {
+  const getAllSongs = useCallback( async () => {
+    try {
+      const option={
+        method:'get',
+        url:'/api/v1/song'
+      }
+      const response=await axios(option);
+      const song =response.data.data.songs;
+      console.log(song);
+    } catch (error) {
+      console.log(error);
+    }
+  },[]);
+  useEffect(()=>{
+    getAllSongs();
+  },[getAllSongs])
   useScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js");
   useScript("../effect/HP.js");
   return (

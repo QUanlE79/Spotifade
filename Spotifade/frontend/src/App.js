@@ -9,9 +9,15 @@ import UserPlaylist from "./components/UserPlaylist";
 
 import Homepage from "./components/Homepage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AppReducer from "./reducers/AppReducer.js";
+import { useReducer } from "react";
+import AppContext from "./components/AppContext";
 function App() {
+  const initialState={user:null,songs:[]};
+  const [state,dispatch]= useReducer(AppReducer,initialState);
   return (
     <Router>
+      <AppContext.Provider value={{state,dispatch}}>
       <div className="container">
         <Switch>
           <Route exact path="/">
@@ -37,6 +43,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      </AppContext.Provider>
     </Router>
   );
 }
