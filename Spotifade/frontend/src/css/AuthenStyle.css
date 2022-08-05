@@ -74,6 +74,11 @@ header .left_bx1 .content .submit {
   cursor: pointer;
 }
 
+header .left_bx1 .content .error-message{
+  color: rgba(255, 0, 0, 0.855);
+  font-size: 15px;
+}
+
 header .left_bx1 .content .check {
   display: flex;
   align-items: center;
