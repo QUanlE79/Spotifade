@@ -246,7 +246,7 @@
   font-size: 20px;
   line-height: 50px;
 }
-.headeradminsong .data_side .list_user nav ul li a {
+.headeradminsong .data_side .list_user nav ul li button {
   margin-left: 350px;
   position: relative;
   background-color: #18202c;
@@ -262,18 +262,18 @@
   text-align: center;
   font-size: 20px;
 }
-.headeradminsong .data_side .list_user nav ul li a:hover {
+.headeradminsong .data_side .list_user nav ul li button:hover {
   letter-spacing: 0.25em;
   background: #ff1867;
   box-shadow: 0 0 35px var(#ff1867);
 }
-.headeradminsong .data_side .list_user nav ul li a::before {
+.headeradminsong .data_side .list_user nav ul li button::before {
   content: "";
   position: absolute;
   inset: 2px;
   background: #18202c;
 }
-.headeradminsong .data_side .list_user nav ul li a span {
+.headeradminsong .data_side .list_user nav ul li button span {
   all: none;
   text-align: center;
   justify-content: center;
@@ -281,7 +281,7 @@
   background: none;
   z-index: 1;
 }
-.headeradminsong .data_side .list_user nav ul li a span .bi {
+.headeradminsong .data_side .list_user nav ul li button span .bi {
   margin-top: 0px;
 }
 .headeradminsong .data_side .list_user nav ul::-webkit-scrollbar {

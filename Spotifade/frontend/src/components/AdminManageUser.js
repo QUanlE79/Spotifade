@@ -1,8 +1,29 @@
-import React from "react";
+import React,{useContext,useCallback,useEffect} from "react";
 import "../css/AdminUserStyle.css";
 import useScript from "../hook/useScripts.js";
+import AppContext from "./AppContext.js";
+import axios from "axios";
 export default function AdminManageUser() {
   useScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js");
+  const {state,dispatch}=useContext(AppContext);
+    const {songs,user,users}=state;
+    const getAllUsers = useCallback( async () => {
+      try {
+        const option={
+          method:'get',
+          url:'/api/v1/auth'
+        }
+        const response=await axios(option);
+        const users =response.data.data.users;
+        
+        dispatch({type: 'GET_ALL_USERS',payload:users});
+      } catch (error) {
+        console.log(error);
+      }
+    },[dispatch]);
+  useEffect(()=>{
+    getAllUsers();
+  },[getAllUsers])
   return (
     <React.Fragment>
       <body>
@@ -41,6 +62,9 @@ export default function AdminManageUser() {
               </div>
 
               <ul>
+              <li>
+                  <a href="/Upload">Upload</a>
+                </li>
                 <li>
                   <a href="/Login">
                     Log out <span></span>
@@ -80,110 +104,18 @@ export default function AdminManageUser() {
             <div class="list_user">
               <nav>
                 <ul>
-                  <li>
-                    User 001
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 002
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 003
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 004
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 005
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 006
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 007
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 008
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 009
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 010
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 011
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 013
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    User 014
-                    <a href="li">
-                      <span>
-                        <i class="bi bi-person-x"></i>
-                      </span>
-                    </a>
-                  </li>
+                  {users.map((users)=>(
+                     <li>
+                     {users.name}
+                     <button >
+                       <span>
+                         <i class="bi bi-person-x"></i>
+                         </span>
+                     </button>
+                   </li>
+                  ))}
+                 
+                 
                 </ul>
               </nav>
             </div>

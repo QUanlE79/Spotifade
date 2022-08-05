@@ -1,33 +1,12 @@
-import React,{useContext,useCallback,useEffect} from "react";
-import "../css/AdminSongStyle.css";
+import React from "react";
+import "../css/AdminUpload.css";
 import useScript from "../hook/useScripts.js";
-import AppContext from "./AppContext.js";
-import axios from "axios";
-export default function AdminManageSong() {
-  const {state,dispatch}=useContext(AppContext);
-  const {songs,user,users}=state;
-  const getAllSongs = useCallback( async () => {
-    try {
-      const option={
-        method:'get',
-        url:'/api/v1/song'
-      }
-      const response=await axios(option);
-      const songs =response.data.data.songs;
-      
-      dispatch({type: 'GET_ALL_SONGS',payload:songs});
-    } catch (error) {
-      console.log(error);
-    }
-  },[dispatch]);
-useEffect(()=>{
-    getAllSongs();
-},[getAllSongs])
+export default function AdminUpload() {
   useScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js");
   return (
     <React.Fragment>
       <body class="bodyadminsong">
-        <header class="headeradminsong">
+        <header class="headeradminupload">
           <div class="menu_side">
             <h1>Spotifade</h1>
             <div class="menu_list">
@@ -62,13 +41,13 @@ useEffect(()=>{
               </div>
 
               <ul>
-              <li>
-                  <a href="/Upload">Upload</a>
+                <li>
+                  <a href="/Upload">
+                    Upload music <span></span>
+                  </a>
                 </li>
                 <li>
-                  <a href="/Login">
-                    Log out <span></span>
-                  </a>
+                  <a href="/Login">Log out</a>
                 </li>
               </ul>
             </nav>
@@ -98,27 +77,57 @@ useEffect(()=>{
                 <img src="./picture/img3.jpg" alt="" id="poster_master_play" />
               </div>
             </div>
-            <div class="text_user">
-              Song List<span></span>
+            <div class="uploadInfo">
+              <div class="songName">
+                <label for="name" class="name">
+                  Name:{" "}
+                </label>
+                <input
+                  type="text"
+                  name="song_name"
+                  placeholder="Enter song's name..."
+                  required
+                />
+              </div>
+              <br />
+              <div class="songAuthor">
+                <label for="name" class="name">
+                  Author:{" "}
+                </label>
+                <input
+                  type="text"
+                  name="song_author"
+                  placeholder="Enter song's author..."
+                  required
+                />
+              </div>
+              <br />
+              <div class="songUrl">
+                <label for="name" class="name">
+                  Url:{" "}
+                </label>
+                <input
+                  type="text"
+                  name="song_name"
+                  placeholder="Enter song's url..."
+                  required
+                />
+              </div>
+              <br />
+              <div class="songUrl">
+                <label for="name" class="name">
+                  Poster Url:{" "}
+                </label>
+                <input
+                  type="text"
+                  name="song_name"
+                  placeholder="Enter song's url..."
+                  required
+                />
+              </div>
+              <input type="submit" value="Confirm" className="submit" />
             </div>
-            <div class="list_user">
-              <nav>
-                <ul>
-                  {songs.map((songs)=>(
-                    <li>
-                    {songs.name}
-                    <button>
-                      <span>
-                        <i class="bi bi-trash3"></i>
-                        </span>
-                    </button>
-                  </li>
 
-                  ))}
- 
-                </ul>
-              </nav>
-            </div>
             <div class="outline">
               <span></span>
               <div class="wave">
@@ -134,29 +143,6 @@ useEffect(()=>{
                   </svg>
                   <h2>Welcome to Spotifade</h2>
                 </section>
-                <script
-                  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
-                  integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
-                  crossorigin="anonymous"
-                  referrerpolicy="no-referrer"
-                ></script>
-                <script
-                  src="https://code.jquery.com/jquery-3.6.0.js"
-                  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-                  crossorigin="anonymous"
-                ></script>
-                <script src="./picture/wavify.js"></script>
-                <script src="./picture/jquery.wavify.js"></script>
-                {/*
-            <script>
-              var myWave = $("linkmyID").wavify({
-                height: 20,
-                bones: 8,
-                amplitude: 100,
-                color: "link1b4d5a",
-                speed: 0.5,
-              });
-            </script>*/}
               </div>
             </div>
           </div>

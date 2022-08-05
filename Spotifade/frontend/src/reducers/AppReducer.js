@@ -6,9 +6,9 @@ export default function reducer(state,action){
         case "GET_ALL_SONGS":
             return {...state,songs:action.payload};
         case "GET_ALL_USERS":
-            return {...state,user:action.payload};    
+            return {...state,users:action.payload};    
         case "CREATE_ONE_SONG":
-            return {...state,songs:[...state.post,action.payload]};
+            return {...state,song:[...state.song,action.payload]};
         case "DELETE_ONE_SONG":
             return {...state,
                 songs: state.songs.filter((song)=>song.id !== action.payload._id)};

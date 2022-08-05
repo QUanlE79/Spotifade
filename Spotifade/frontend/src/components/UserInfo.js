@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/UserInfoStyle.css";
-import useScript from "../hook/useScripts";
+import useScript from "../hook/useScripts.js";
 export default function UserInfo() {
   useScript("../effect/HP.js");
   return (
