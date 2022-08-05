@@ -45,7 +45,7 @@ function App() {
       <AppContext.Provider value={{state,dispatch}}>
       <div className="container">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/Homepage">
             <Homepage />
           </Route>
           <Route exact path="/UserPlaylist">
@@ -63,7 +63,7 @@ function App() {
           <Route exact path="/AdminManageSong">
             <AdminManageSong />
           </Route>
-          <Route exact path="/Login">
+          <Route exact path="/">
             <Login />
           </Route>
           <Route exact path="/Signup">

@@ -66,7 +66,7 @@ useEffect(()=>{
                   <a href="/Upload">Upload</a>
                 </li>
                 <li>
-                  <a href="/Login">
+                  <a href="/">
                     Log out <span></span>
                   </a>
                 </li>

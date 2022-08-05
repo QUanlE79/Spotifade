@@ -22,7 +22,7 @@ export default function Signup() {
       const {token,userName} = response.data.data;
       localStorage.setItem("token", token);
       dispatch({type: "CURRENT_USER", payload: {userName}});
-      history.push("/Login");
+      history.push("/");
     } catch (error){
       setErrorMessage(error.response.data.message);
     }

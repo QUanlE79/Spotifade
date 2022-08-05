@@ -9,9 +9,13 @@ export default function AdminManageUser() {
     const {songs,user,users}=state;
     const getAllUsers = useCallback( async () => {
       try {
+        const token=localStorage.getItem("token");
         const option={
           method:'get',
-          url:'/api/v1/auth'
+          url:'/api/v1/auth/admin',
+          headers:{
+            Authorization:`Bearer ${token}`,
+          },
         }
         const response=await axios(option);
         const users =response.data.data.users;
@@ -66,7 +70,7 @@ export default function AdminManageUser() {
                   <a href="/Upload">Upload</a>
                 </li>
                 <li>
-                  <a href="/Login">
+                  <a href="/">
                     Log out <span></span>
                   </a>
                 </li>

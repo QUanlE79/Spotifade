@@ -29,7 +29,7 @@ export default function Login() {
         history.push("/AdminManageSong")
       }
       else{
-        history.push("/");
+        history.push("/Homepage");
       }
       
     } catch (error){

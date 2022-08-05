@@ -8,7 +8,7 @@ export default function UserInfo() {
       <body>
         <header>
           <div class="menu_side">
-            <a href="/">
+            <a href="/Homepage">
               <h1>Spotifade</h1>
             </a>
             <div class="playlist">
@@ -81,7 +81,7 @@ export default function UserInfo() {
                   </a>
                 </li>
                 <li>
-                  <a href="/Login">Log out</a>
+                  <a href="/">Log out</a>
                 </li>
               </ul>
             </nav>

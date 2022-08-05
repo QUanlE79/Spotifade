@@ -238,7 +238,7 @@ console.log(state);
       <body>
         <header>
           <div class="menu_side">
-            <a href="/">
+            <a href="/Homepage">
               <h1>Spotifade</h1>
             </a>
             <div class="playlist">
@@ -311,7 +311,7 @@ console.log(state);
                   <a href="/UserInfomation">My Profile</a>
                 </li>
                 <li>
-                  <a href="/Login">Log out</a>
+                  <a href="/">Log out</a>
                 </li>
               </ul>
             </nav>

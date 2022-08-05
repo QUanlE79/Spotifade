@@ -47,7 +47,7 @@ export default function AdminUpload() {
                   </a>
                 </li>
                 <li>
-                  <a href="/Login">Log out</a>
+                  <a href="/">Log out</a>
                 </li>
               </ul>
             </nav>

@@ -9,7 +9,7 @@ export default function User_playlist() {
       <body>
         <header>
           <div class="menu_side">
-            <a href="/">
+            <a href="/Homepage">
               <h1>Spotifade</h1>
             </a>
             <div class="playlist">
@@ -82,7 +82,7 @@ export default function User_playlist() {
                   </a>
                 </li>
                 <li>
-                  <a href="/Login">Log out</a>
+                  <a href="/">Log out</a>
                 </li>
               </ul>
             </nav>
