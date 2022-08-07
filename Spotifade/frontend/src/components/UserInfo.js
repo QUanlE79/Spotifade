@@ -1,8 +1,12 @@
-import React from "react";
+import React,{useContext} from "react";
 import "../css/UserInfoStyle.css";
 import useScript from "../hook/useScripts.js";
+import AppContext from "./AppContext.js";
 export default function UserInfo() {
   useScript("../effect/HP.js");
+  const {state,dispatch}=useContext(AppContext);
+  const{songs,user,users}=state
+  
   return (
     <React.Fragment>
       <body>
@@ -28,39 +32,39 @@ export default function UserInfo() {
             <div class="menu_song">
               <li class="song_item">
                 <span>01</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
-                  <div class="subtitle">Ang ang</div>
+                  Song name
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="1"></i>
               </li>
               <li class="song_item">
                 <span>02</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
-                  <div class="subtitle">Ang ang</div>
+                  Song name
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="2"></i>
               </li>
               <li class="song_item">
                 <span>03</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
+                  Song name
                   <br />
-                  <div class="subtitle">Ang ang</div>
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="3"></i>
               </li>
               <li class="song_item">
                 <span>04</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
+                  Song name
                   <br />
-                  <div class="subtitle">Ang ang</div>
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="4"></i>
               </li>
@@ -97,10 +101,8 @@ export default function UserInfo() {
                   <path id="myID" d="" />
                 </svg>
                 <img src="./picture/img1.jpg" alt="" />
-                <h2>Quan Le</h2>
-                <h3>Username: lequan2k2.ql</h3>
-                <h3>Email: lequan2k2.ql@gmail.com</h3>
-                <h3>Phone: 09876543211 </h3>
+                <h3>Username: xxxx</h3>
+                <h3>Email: xxxxyy@aaa.com</h3>
               </section>
               <script
                 src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
@@ -126,7 +128,7 @@ export default function UserInfo() {
             </div>
             <img src="./picture/img1.jpg" alt="" id="poster_master_play" />
             <h5 id="title">
-              Gau Gau Gau
+              Song name
               <div class="subtitle">Con Cho</div>
             </h5>
             <div class="icon">

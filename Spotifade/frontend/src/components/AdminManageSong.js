@@ -20,31 +20,50 @@ export default function AdminManageSong() {
       console.log(error);
     }
   },[dispatch]);
+  
 useEffect(()=>{
     getAllSongs();
 },[getAllSongs])
+const deleteSong = async (song)=>{
+  if(song){
+  try {
+    const token=localStorage.getItem("token");
+    const  option={
+      method:"delete",
+      url:`/api/v1/song/${song._id}`,
+      headers: {
+        Authorization:`Bearer ${token}`,
+      },
+    };
+    await axios(option);
+    dispatch({type:"DELETE_ONE_SONG",payload:{_id:song._id}})
+  } catch (error) {
+    console.log(error);
+  }
+} 
+}
   useScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js");
   return (
     <React.Fragment>
-      <body class="bodyadminsong">
-        <header class="headeradminsong">
-          <div class="menu_side">
+      <body className="bodyadminsong">
+        <header className="headeradminsong">
+          <div className="menu_side">
             <h1>Spotifade</h1>
-            <div class="menu_list">
+            <div className="menu_list">
               <a href="/AdminManageUser">
                 <h4>
                   <span></span>
-                  <i class="bi bi-person-lines-fill"></i>User
+                  <i className="bi bi-person-lines-fill"></i>User
                 </h4>
               </a>
               <a href="/AdminManageSong">
-                <h4 class="active" id="active">
+                <h4 className="active" id="active">
                   <span></span>
-                  <i class="bi bi-music-note-beamed"></i>Song
+                  <i className="bi bi-music-note-beamed"></i>Song
                 </h4>
               </a>
             </div>
-            <div class="founder_side">
+            <div className="founder_side">
               20127442 - Tôn Thất Bách <br />
               20127475 - Nguyễn Trần Đại Dương
               <br />
@@ -54,10 +73,10 @@ useEffect(()=>{
               <br />
             </div>
           </div>
-          <div class="data_side">
+          <div className="data_side">
             <nav>
-              <div class="search">
-                <i class="bi bi-search"></i>
+              <div className="search">
+                <i className="bi bi-search"></i>
                 <input type="text" placeholder="Search Music" />
               </div>
 
@@ -73,44 +92,44 @@ useEffect(()=>{
               </ul>
             </nav>
             <div
-              class="carousel js-flickity"
+              className="carousel js-flickity"
               data-flickity-options='{ "wrapAround": true }'
             >
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img1.jpg" alt="" id="poster_master_play" />
               </div>
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img2.jpg" alt="" id="poster_master_play" />
               </div>
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img3.jpg" alt="" id="poster_master_play" />
               </div>
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img4.jpg" alt="" id="poster_master_play" />
               </div>
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img5.jpg" alt="" id="poster_master_play" />
               </div>
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img4.jpg" alt="" id="poster_master_play" />
               </div>
-              <div class="image">
+              <div className="image">
                 <img src="./picture/img3.jpg" alt="" id="poster_master_play" />
               </div>
             </div>
-            <div class="text_user">
+            <div className="text_user">
               Song List<span></span>
             </div>
-            <div class="list_user">
+            <div className="list_user">
               <nav>
                 <ul>
-                  {songs.map((songs)=>(
-                    <li>
-                    {songs.name}
-                    <button>
-                      <span>
-                        <i class="bi bi-trash3"></i>
-                        </span>
+                  {songs.map((song)=>(
+                    <li key={song._id} value={song} >
+                    {song.name}
+                    <button onClick={(e)=>this.deleteSong(song)}>
+                      <a>
+                        <i className="bi bi-trash3"></i>
+                        </a>
                     </button>
                   </li>
 
@@ -119,9 +138,9 @@ useEffect(()=>{
                 </ul>
               </nav>
             </div>
-            <div class="outline">
+            <div className="outline">
               <span></span>
-              <div class="wave">
+              <div className="wave">
                 <section>
                   <svg
                     width="100%"

@@ -273,7 +273,7 @@
   inset: 2px;
   background: #18202c;
 }
-.headeradminsong .data_side .list_user nav ul li button span {
+.headeradminsong .data_side .list_user nav ul li button a {
   all: none;
   text-align: center;
   justify-content: center;
@@ -281,7 +281,7 @@
   background: none;
   z-index: 1;
 }
-.headeradminsong .data_side .list_user nav ul li button span .bi {
+.headeradminsong .data_side .list_user nav ul li button a .bi {
   margin-top: 0px;
 }
 .headeradminsong .data_side .list_user nav ul::-webkit-scrollbar {

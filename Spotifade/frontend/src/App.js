@@ -12,11 +12,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AppReducer from "./reducers/AppReducer.js";
 import { useCallback, useEffect, useReducer } from "react";
 import AppContext from "./components/AppContext.js";
+import { createBrowserHistory } from "history";
 import axios from "axios";
 function App() {
   const initialState={user:null,songs:[],users:[]};
   const [state,dispatch]= useReducer(AppReducer,initialState);
-
+  const history = createBrowserHistory({forceRefresh:true});
+  const user=state
   const checkCurrentUser=useCallback(async ()=>{
     try {
       const token=localStorage.getItem("token");
@@ -40,6 +42,7 @@ function App() {
    useEffect(()=>{
     checkCurrentUser();
    },[checkCurrentUser])
+   
   return (
     <Router>
       <AppContext.Provider value={{state,dispatch}}>

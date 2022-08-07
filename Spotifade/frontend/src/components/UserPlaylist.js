@@ -29,39 +29,39 @@ export default function User_playlist() {
             <div class="menu_song">
               <li class="song_item">
                 <span>01</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
-                  <div class="subtitle">Ang ang</div>
+                  Song name
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="1"></i>
               </li>
               <li class="song_item">
                 <span>02</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
-                  <div class="subtitle">Ang ang</div>
+                  Song name
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="2"></i>
               </li>
               <li class="song_item">
                 <span>03</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
+                  Song name
                   <br />
-                  <div class="subtitle">Ang ang</div>
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="3"></i>
               </li>
               <li class="song_item">
                 <span>04</span>
-                <img src="./picture/img1.jpg" alt="Concho" />
+                <img src="./picture/img1.jpg" alt="undefine" />
                 <h5>
-                  Gau Gau Gau
+                  Song name
                   <br />
-                  <div class="subtitle">Ang ang</div>
+                  <div class="subtitle">author</div>
                 </h5>
                 <i class="bi playListPlay bi-play-circle" id="4"></i>
               </li>
@@ -159,34 +159,34 @@ export default function User_playlist() {
                       data-flickity-options='{ "wrapAround": true }'
                     >
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="5"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="6"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="7"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="8"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="9"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="10"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                     </div>
                   </li>
@@ -199,34 +199,34 @@ export default function User_playlist() {
                       data-flickity-options='{ "wrapAround": true }'
                     >
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="11"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="12"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="13"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="14"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="15"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="16"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                     </div>
                   </li>
@@ -239,34 +239,34 @@ export default function User_playlist() {
                       data-flickity-options='{ "wrapAround": true }'
                     >
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="17"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="18"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="19"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="20"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="21"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                       <div class="song">
-                        <img src="./picture/img1.jpg" alt="Concho" />
+                        <img src="./picture/img1.jpg" alt="undefine" />
                         <i class="bi playListPlay bi-play-circle" id="22"></i>
-                        <h5>Gau Gau Gau</h5>
+                        <h5>Song name</h5>
                       </div>
                     </div>
                   </li>
@@ -283,7 +283,7 @@ export default function User_playlist() {
             </div>
             <img src="./picture/img1.jpg" alt="" id="poster_master_play" />
             <h5 id="title">
-              Gau Gau Gau
+              Song name
               <div class="subtitle">Con Cho</div>
             </h5>
             <div class="icon">

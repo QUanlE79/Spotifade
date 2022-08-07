@@ -11,10 +11,10 @@ export default function reducer(state,action){
             return {...state,song:[...state.song,action.payload]};
         case "DELETE_ONE_SONG":
             return {...state,
-                songs: state.songs.filter((song)=>song.id !== action.payload._id)};
+                songs: state.songs.filter((song)=>song._id !== action.payload._id)};
         case "DELETE_ONE_USER":
             return {...state,
-                users: state.user.filter((user)=>user.id !== action.payload._id)};
+                users: state.user.filter((user)=>user._id !== action.payload._id)};
         default:
             return state;
             
