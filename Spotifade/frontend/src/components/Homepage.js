@@ -6,30 +6,28 @@ import AppContext from "./AppContext.js";
 //import Playmusic from "../effect/HP";
 export default function Homepage() {
   useScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js");
-  useScript("../effect/HP.js")
-  const {state,dispatch}=useContext(AppContext);
+  useScript("../effect/HP.js");
+  const { state, dispatch } = useContext(AppContext);
 
-  
-  const getAllSongs = useCallback( async () => {
+  const getAllSongs = useCallback(async () => {
     try {
-      const option={
-        method:'get',
-        url:'/api/v1/song'
-      }
-      const response=await axios(option);
-      const songs =response.data.data.songs;
-      
-      dispatch({type: 'GET_ALL_SONGS',payload:songs});
+      const option = {
+        method: "get",
+        url: "/api/v1/song",
+      };
+      const response = await axios(option);
+      const songs = response.data.data.songs;
+
+      dispatch({ type: "GET_ALL_SONGS", payload: songs });
     } catch (error) {
       console.log(error);
     }
-  },[dispatch]);
-useEffect(()=>{
+  }, [dispatch]);
+  useEffect(() => {
     getAllSongs();
-},[getAllSongs])
+  }, [getAllSongs]);
 
-console.log(state); 
-
+  console.log(state);
 
   return (
     <React.Fragment>
@@ -97,13 +95,23 @@ console.log(state);
           <div class="song_side">
             <nav>
               <div class="search">
-                <i class="bi bi-search"></i>
+                <a href="/Searchsong">
+                  <i class="bi bi-search"></i>
+                </a>
                 <input type="text" placeholder="Search Music" />
               </div>
 
               <ul>
                 <li>
-                  Category <span></span>
+                  <div class="dropdown">
+                    <button class="dropbtn">Category</button>
+                    <div class="dropdown-content">
+                      <a href="/Searchsong">Vietnam song</a>
+                      <a href="/Searchsong">America song</a>
+                      <a href="/Searchsong">Chinese song</a>
+                    </div>
+                  </div>{" "}
+                  <span></span>
                 </li>
                 <li>
                   <a href="/UserInfomation">My Profile</a>
@@ -290,7 +298,7 @@ console.log(state);
             <div class="bar">
               <input type="range" id="seek" min="0" max="100" />
               <div class="bar2" id="bar2"></div>
-              <div class="dot" ></div>
+              <div class="dot"></div>
             </div>
             <span id="currentEnd">0:30</span>
             <div class="vol">
